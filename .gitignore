@@ -1,0 +1,6 @@
+.nextflow*
+singularity_containers
+/input
+/output
+/work
+/cache
