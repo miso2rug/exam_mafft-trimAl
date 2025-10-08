@@ -1,11 +1,10 @@
 params.out = "${projectDir}/output"
 params.cache = "${projectDir}/cache"
 params.accession = "M21012" // accession number for reference sequence from genbank
-params.input = "${projectDir}/input" // storage folder for sequences to be aligned against reference
+params.input = "${projectDir}/input" // storage folder for sequences in fastaformat to be aligned against reference
 
 
 process downloadRef {
-//    publishDir params.out, mode: "copy", overwrite : true
     storeDir params.cache
     output:
         path "${params.accession}.fasta"
@@ -16,7 +15,6 @@ process downloadRef {
 }
 
 process mergeSeqs {
-//    publishDir params.out, mode: 'copy', overwrite: true
     storeDir params.cache
     input:
         path fastafiles
@@ -29,7 +27,6 @@ process mergeSeqs {
 }
 
 process mafft {
-//    publishDir params.out, mode: 'copy', overwrite: true
     storeDir params.cache
     container "https://depot.galaxyproject.org/singularity/mafft%3A7.525--h031d066_1"
     input:
