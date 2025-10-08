@@ -8,5 +8,5 @@
 `nextflow run aa_exam.nf -profile singularity`
 
 3. Optional:
-- --input         directory/folder with stored fasta file(s) for msa, default: projectdirectory/input/
-- --accession     genebank accession number of reference sequence, default: M21012
+- --input: directory/folder with stored fasta file(s) for msa, default: projectdirectory/input/
+- --accession: genebank accession number of reference sequence, default: M21012
